@@ -1,0 +1,34 @@
+# Smithery configuration file: https://smithery.ai/docs/build/project-config
+
+startCommand:
+  type: stdio
+  commandFunction:
+    # A JS function that produces the CLI command based on the given config to start the MCP on stdio.
+    |-
+    (config) => ({ command: 'python', args: ['-u', 'evoapi_mcp.py'], env: { EVO_API_URL: config.evoApiUrl, EVO_API_TOKEN: config.evoApiToken, EVO_INSTANCE_NAME: config.evoInstanceName, EVO_INSTANCE_TOKEN: config.evoInstanceToken } })
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required:
+      - evoApiUrl
+      - evoApiToken
+      - evoInstanceName
+      - evoInstanceToken
+    properties:
+      evoApiUrl:
+        type: string
+        description: EVO_API_URL
+      evoApiToken:
+        type: string
+        description: EVO_API_TOKEN
+      evoInstanceName:
+        type: string
+        description: EVO_INSTANCE_NAME
+      evoInstanceToken:
+        type: string
+        description: EVO_INSTANCE_TOKEN
+  exampleConfig:
+    evoApiUrl: https://api.evolution.com
+    evoApiToken: abcdef123456
+    evoInstanceName: my_instance
+    evoInstanceToken: instance_token_xyz
