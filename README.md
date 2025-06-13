@@ -5,6 +5,7 @@ Um servidor MCP (Model Context Protocol) para integração com Evolution API, pe
 [![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://python.org)
 [![MCP](https://img.shields.io/badge/MCP-1.6+-green.svg)](https://modelcontextprotocol.io)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![smithery badge](https://smithery.ai/badge/@fellipesaraiva88/evoapi-mcp)](https://smithery.ai/server/@fellipesaraiva88/evoapi-mcp)
 
 ## 📋 Índice
 
@@ -43,6 +44,14 @@ O **EvoAPI MCP Server** é uma ponte entre agentes de IA (como Claude) e a Evolu
 - **Histórico de Mensagens**: Acesso completo ao histórico de conversas
 
 ## 🚀 Instalação
+
+### Instalando via Smithery
+
+Para instalar evoapi-mcp para Claude Desktop automaticamente via [Smithery](https://smithery.ai/server/@fellipesaraiva88/evoapi-mcp):
+
+```bash
+npx -y @smithery/cli install @fellipesaraiva88/evoapi-mcp --client claude
+```
 
 ### Pré-requisitos
 
